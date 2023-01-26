@@ -5,9 +5,7 @@ import Task from './components/Task';
 
 export default function App() {
   const [task, setTask] = useState();
-
   const [taskItems, setTaskItems] = useState([]);
-
 
   const handleAddTask = () => {
     Keyboard.dismiss();
@@ -32,16 +30,16 @@ export default function App() {
         <View style={styles.items}>
           {/* Tasks go here */}
           <ScrollView showsVerticalScrollIndicator={false}>
-          {
-            taskItems.map((item, index) => {
-              return (
-              <TouchableOpacity key={index} onPress={() => completeTask(index)}>
-                <Task text={item} />
-              </TouchableOpacity>
-              )
-            })
-          }
-          <View style={{height:180}}></View>
+            {
+              taskItems.map((item, index) => {
+                return (
+                  <TouchableOpacity key={index} onPress={() => completeTask(index)}>
+                    <Task text={item} />
+                  </TouchableOpacity>
+                )
+              })
+            }
+            <View style={{ height: 180 }}></View>
           </ScrollView>
         </View>
       </View>
@@ -73,9 +71,9 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#f2f2f2',
   },
-  noteText:{
-    color:'#fff',
-    opacity:0.5
+  noteText: {
+    color: '#fff',
+    opacity: 0.5
   },
   items: {
     marginTop: 30,
