@@ -27,6 +27,7 @@ export default function App() {
       {/* Today's Tasks */}
       <View style={styles.tasksWrap}>
         <Text style={styles.sectionTitle}>Today's Tasks</Text>
+        <Text style={styles.noteText}>Tap on a task to remove it</Text>
 
         <View style={styles.items}>
           {/* Tasks go here */}
@@ -60,7 +61,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#2d2d2d',
   },
   tasksWrap: {
-    paddingTop: 80,
+    paddingTop: 60,
     paddingHorizontal: 20,
 
   },
@@ -69,12 +70,16 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#f2f2f2',
   },
+  noteText:{
+    color:'#fff',
+    opacity:0.5
+  },
   items: {
     marginTop: 30,
   },
   writeText: {
     position: 'absolute',
-    bottom: 60,
+    bottom: 20,
     width: '100%',
     flexDirection: 'row',
     justifyContent: 'space-around',
