@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { Keyboard, KeyboardAvoidingView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { Keyboard, KeyboardAvoidingView, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import Task from './components/Task';
 
 export default function App() {
@@ -31,6 +31,7 @@ export default function App() {
 
         <View style={styles.items}>
           {/* Tasks go here */}
+          <ScrollView showsVerticalScrollIndicator={false}>
           {
             taskItems.map((item, index) => {
               return (
@@ -40,6 +41,8 @@ export default function App() {
               )
             })
           }
+          <View style={{height:180}}></View>
+          </ScrollView>
         </View>
       </View>
       {/* Write a Task */}
