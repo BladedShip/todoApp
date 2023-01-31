@@ -2,7 +2,7 @@
   "expo": {
     "name": "Dis Shit Bumps",
     "slug": "todoApp",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "dark",
@@ -18,7 +18,8 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.adithyan.todoapp"
     },
     "android": {
       "package": "com.adithyan.todoapp",
