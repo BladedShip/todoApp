@@ -20,13 +20,13 @@ export default function App() {
   }
 
   return (
-    <View style={styles.container}> {/* Primary View for Tasks */}
+    <View style={styles.container}> 
 
       <View style={styles.tasksWrap}>
         <Text style={styles.sectionTitle}>Today's Tasks</Text>
         <Text style={styles.noteText}>Tap on a task to remove it</Text>
 
-        <View style={styles.items}>{/* Task Cards */}
+        <View style={styles.items}>
           <ScrollView showsVerticalScrollIndicator={false}>
             {
               taskItems.map((item, index) => {
@@ -37,12 +37,12 @@ export default function App() {
                 )
               })
             }
-            <View style={{ height: 180 }}></View> {/* Jank way to fix */}
+            <View style={{ height: 180 }}></View>
           </ScrollView>
         </View>
       </View>
 
-      <KeyboardAvoidingView behavior={Platform.OS === "ios" ? "padding" : "height"} style={styles.writeText}> {/* Task Additions */}
+      <KeyboardAvoidingView behavior={Platform.OS === "ios" ? "padding" : "height"} style={styles.writeText}> 
         <TextInput style={styles.input} placeholder={'Write any Task'} placeholderTextColor={'#fff'} value={task} onChangeText={text => setTask(text)} />
         <TouchableOpacity onPress={() => handleAddTask()}>
           <View style={styles.addWrapper}>
